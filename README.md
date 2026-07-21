@@ -19,8 +19,24 @@ A spruced-up native WebExtension port of **[Darsh-A's original userChrome script
 
 ## 🚀 Installation
 
-### Temporary Installation (Developer Mode)
+### Option 1: Firefox Add-ons Store (Recommended)
+
+Install QuickSearch directly from the official Mozilla Add-ons directory:
+
+👉 **[Get QuickSearch on Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/quicksearch-arc-style-overlay/)**
+
+*(Works on Firefox, Zen Browser, LibreWolf, and other Gecko-based browsers).*
+
+---
+
+### Option 2: Manual / Developer Installation
+
+If you prefer to load the extension locally or contribute to development:
 
 1. Clone or download this repository:
    ```bash
    git clone [https://github.com/alejandrovegab/QuickSearch-Extension.git](https://github.com/alejandrovegab/QuickSearch-Extension.git)
+   ```
+2. Open your browser and navigate to `about:debugging#/runtime/this-firefox`.
+3. Click **Load Temporary Add-on...**
+4. Select the `manifest.json` file inside the project directory.
