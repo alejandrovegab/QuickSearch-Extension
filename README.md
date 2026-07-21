@@ -1,4 +1,4 @@
-# QuickSearch-Extension
+# QuickSearch Extension
 
 An Arc-style quick search overlay for Firefox and Gecko-based browsers (Zen Browser, LibreWolf, Floorp, etc.).
 
