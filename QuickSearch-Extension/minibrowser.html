@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>QuickSearch Mini Browser</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #1e1f1f;
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      padding: 0 12px;
+      gap: 8px;
+      overflow: hidden;
+    }
+    #search-icon { flex-shrink: 0; opacity: 0.4; }
+    #search-input {
+      flex-grow: 1;
+      background: transparent;
+      border: none; outline: none;
+      color: #e0e0e0; font-size: 15px;
+      caret-color: #e0e0e0;
+    }
+    #search-input::placeholder { color: #555; }
+
+    #engine-wrapper { position: relative; flex-shrink: 0; }
+    #engine-btn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 5px 9px; border-radius: 6px;
+      border: 1px solid #404040;
+      background: #2a2a2a; color: #e0e0e0;
+      font-size: 12px; cursor: pointer; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    #engine-btn:hover { background: #333; }
+    #engine-btn img { width: 14px; height: 14px; }
+    #engine-options {
+      position: absolute; top: 110%; right: 0;
+      min-width: 160px; background: #2a2a2a;
+      border: 1px solid #404040; border-radius: 7px;
+      max-height: 200px; overflow-y: auto;
+      z-index: 999; display: none;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+    .engine-option {
+      display: flex; align-items: center; gap: 8px;
+      padding: 7px 12px; cursor: pointer; font-size: 13px;
+      transition: background 0.15s;
+    }
+    .engine-option:hover { background: #333; }
+    .engine-option img { width: 14px; height: 14px; }
+
+    #open-tab-btn {
+      display: flex; align-items: center; gap: 4px;
+      padding: 5px 9px; border-radius: 6px;
+      border: 1px solid #404040;
+      background: #2a2a2a; color: #e0e0e0;
+      font-size: 12px; cursor: pointer; white-space: nowrap;
+      flex-shrink: 0; transition: background 0.2s;
+    }
+    #open-tab-btn:hover { background: #333; }
+  </style>
+</head>
+<body>
+  <svg id="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e0e0e0" stroke-width="2.5">
+    <circle cx="11" cy="11" r="8"/>
+    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+  </svg>
+  <input id="search-input" type="text" placeholder="Search... (Enter to open, Esc to close)" autofocus/>
+  <div id="engine-wrapper">
+    <button id="engine-btn">Search</button>
+    <div id="engine-options"></div>
+  </div>
+  <button id="open-tab-btn" title="Open in new tab">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+      <polyline points="15 3 21 3 21 9"/>
+      <line x1="10" y1="14" x2="21" y2="3"/>
+    </svg>
+    Tab
+  </button>
+  <script src="minibrowser.js"></script>
+</body>
+</html>
