@@ -1,6 +1,6 @@
 # QuickSearch Extension
 
-An Arc-style quick search overlay for Firefox and Gecko-based browsers (Zen Browser, LibreWolf, Floorp, etc.).
+A Little Arc-style quick search overlay for Firefox and Gecko-based browsers (Zen Browser, LibreWolf, Floorp, etc.).
 
 A spruced-up native WebExtension port of **[Darsh-A's original userChrome script](https://github.com/Darsh-A/Quick-Search-Zen-Browser/tree/main)**—re-engineered for one-click installation, pop-up windows, container context preservation, and zero manual configuration.
 
